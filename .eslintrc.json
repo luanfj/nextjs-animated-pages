@@ -41,7 +41,9 @@
     ],
     "comma-dangle": "off",
     "semi": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "implicit-arrow-linebreak": "off",
+    "arrow-parens": "off"
   },
   "overrides": [
     {
