@@ -43,7 +43,9 @@
     "semi": "off",
     "react/react-in-jsx-scope": "off",
     "implicit-arrow-linebreak": "off",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "camelcase": "off",
+    "object-curly-newline": "off"
   },
   "overrides": [
     {
