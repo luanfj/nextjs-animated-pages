@@ -51,21 +51,12 @@ export const ProductCartContainer = styled(motion.div)`
   }
 
   &:hover {
-    .img {
-      transform: scale(1.1);
-    }
-
     &:after,
     &:before {
       height: 80%;
       background-color: #ababab;
       z-index: 1;
     }
-  }
-
-  .img {
-    transition: transform 0.2s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   @media only screen and (max-width: 600px) {

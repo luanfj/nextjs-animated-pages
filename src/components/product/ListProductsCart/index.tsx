@@ -44,7 +44,11 @@ const ListProductsCart: FC<ListProductCartsProps> = ({ products }) => (
         as={`/products/${product.id}`}
       >
         <S.ProductCartContainer variants={fadeInUp}>
-          <motion.div className="img" variants={imageFadeInUp}>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            variants={imageFadeInUp}
+          >
             <Image
               quality="85"
               width={180}
