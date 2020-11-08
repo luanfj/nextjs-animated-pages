@@ -1,9 +1,11 @@
 import { FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 import { ProductProps } from 'components/product/ListProductsCart'
 import Button from 'components/ui/Button'
+import { fadeInUp, stagger } from 'templates/Home'
 import * as S from './styles'
 
 export interface ProductsTemplateProps {
@@ -13,42 +15,52 @@ export interface ProductsTemplateProps {
 }
 
 const Products: FC<ProductsTemplateProps> = ({ product }) => (
-  <S.Container>
+  <S.Container exit={{ opacity: 0 }} initial="initial" animate="animate">
     <S.PreviewContainer>
-      <Image
-        quality="85"
-        width={400}
-        height={400}
-        layout="intrinsic"
-        src={product.image}
-        alt={product.name}
-      />
+      <motion.div variants={fadeInUp}>
+        <Image
+          quality="85"
+          width={400}
+          height={400}
+          layout="intrinsic"
+          src={product.image}
+          alt={product.name}
+        />
+      </motion.div>
     </S.PreviewContainer>
     <S.Content>
-      <S.Wrapper>
-        <Link href="/">Voltar ao início</Link>
-        <S.Category>Proteín</S.Category>
-        <h1>{product.name}</h1>
-        <p>{product.details}</p>
+      <S.Wrapper variants={stagger}>
+        <motion.div variants={fadeInUp} style={{ display: 'flex' }}>
+          <Link href="/">Voltar ao início</Link>
+        </motion.div>
+        <S.Category variants={fadeInUp}>Proteín</S.Category>
+        <motion.div variants={fadeInUp}>
+          <h1>{product.name}</h1>
+        </motion.div>
+        <motion.div variants={fadeInUp}>
+          <p>{product.details}</p>
+        </motion.div>
 
         <S.Tags>
-          <span>Soy Free</span>
-          <span>Gluten Free</span>
+          <motion.span variants={fadeInUp}>Soy Free</motion.span>
+          <motion.span variants={fadeInUp}>Gluten Free</motion.span>
         </S.Tags>
 
         <S.QuantityPrice>
           <S.Quantity>
-            <div>+</div>
-            <div>1</div>
-            <div>-</div>
+            <motion.div variants={fadeInUp}>+</motion.div>
+            <motion.div variants={fadeInUp}>1</motion.div>
+            <motion.div variants={fadeInUp}>-</motion.div>
           </S.Quantity>
 
-          <S.Price>{product.price}</S.Price>
+          <S.Price variants={fadeInUp}>{product.price}</S.Price>
         </S.QuantityPrice>
 
         <S.ButtonsArea>
-          <Button>aa</Button>
-          <Button variant="empty">aa</Button>
+          <Button variants={fadeInUp}>aa</Button>
+          <Button variant="empty" variants={fadeInUp}>
+            aa
+          </Button>
         </S.ButtonsArea>
       </S.Wrapper>
     </S.Content>

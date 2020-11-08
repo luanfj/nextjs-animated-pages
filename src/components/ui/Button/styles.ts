@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { motion } from 'framer-motion'
 
 import { ButtonProps } from '.'
 
@@ -13,7 +14,7 @@ const buttonVariants = {
   `
 }
 
-export const Container = styled.button<ButtonProps>`
+export const Container = styled(motion.button)<ButtonProps>`
   border: none;
   border-radius: 8px;
   height: 48px;

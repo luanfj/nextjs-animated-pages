@@ -4,10 +4,17 @@ import * as S from './styles'
 
 export interface ButtonProps {
   variant?: 'primary' | 'empty'
+  variants?: any
 }
 
-const Button: FC<ButtonProps> = ({ children, variant = 'primary' }) => (
-  <S.Container variant={variant}>{children}</S.Container>
+const Button: FC<ButtonProps> = ({
+  children,
+  variant = 'primary',
+  variants
+}) => (
+  <S.Container variant={variant} variants={variants}>
+    {children}
+  </S.Container>
 )
 
 export default Button

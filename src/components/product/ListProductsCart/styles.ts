@@ -1,11 +1,15 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const ProductCartWrapper = styled.div`
   display: flex;
-  margin-top: 20px;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 `
 
-export const ProductCartContainer = styled.div`
+export const ProductCartContainer = styled(motion.div)`
   width: 250px;
   height: 300px;
   display: flex;
@@ -47,8 +51,8 @@ export const ProductCartContainer = styled.div`
   }
 
   &:hover {
-    img {
-      transform: scale(1.05);
+    .img {
+      transform: scale(1.1);
     }
 
     &:after,
@@ -59,13 +63,19 @@ export const ProductCartContainer = styled.div`
     }
   }
 
-  img {
+  .img {
     transition: transform 0.2s;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  @media only screen and (max-width: 600px) {
+    & + & {
+      margin-top: 30px;
+    }
+  }
 `
 
-export const ProductInfo = styled.div`
+export const ProductInfo = styled(motion.div)`
   position: relative;
   bottom: 0;
 
@@ -85,6 +95,14 @@ export const ProductInfo = styled.div`
     &:nth-child(2) {
       color: #b1b1b1;
       font-size: 15px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 16px;
+
+      &:nth-child(1) {
+        font-size: 20px;
+      }
     }
   }
 `

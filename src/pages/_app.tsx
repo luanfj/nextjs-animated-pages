@@ -4,12 +4,12 @@ import { AnimatePresence } from 'framer-motion'
 
 import GlobalStyles from 'styles/global'
 
-const App: FC<AppProps> = ({ Component, pageProps }) => (
+const App: FC<AppProps> = ({ Component, pageProps, router }) => (
   <>
-    <AnimatePresence exitBeforeEnter>
-      <Component {...pageProps} />
+    <AnimatePresence>
+      <Component {...pageProps} key={router.route} />
+      <GlobalStyles />
     </AnimatePresence>
-    <GlobalStyles />
   </>
 )
 

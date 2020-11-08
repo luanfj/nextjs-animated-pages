@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: flex;
   align-content: stretch;
 
@@ -39,7 +40,7 @@ export const Content = styled.section`
   }
 `
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   width: 100%;
   max-width: 480px;
   display: flex;
@@ -64,7 +65,7 @@ export const Wrapper = styled.div`
   }
 `
 
-export const Category = styled.div`
+export const Category = styled(motion.div)`
   text-transform: uppercase;
   font-size: 15px;
   color: #424550;
@@ -117,7 +118,7 @@ export const Quantity = styled.div`
   }
 `
 
-export const Price = styled.div`
+export const Price = styled(motion.div)`
   color: #282828;
   font-weight: 700;
   font-size: 14px;
