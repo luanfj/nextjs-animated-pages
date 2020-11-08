@@ -58,9 +58,9 @@ const Products: FC<ProductsTemplateProps> = ({ product }) => (
         </S.QuantityPrice>
 
         <S.ButtonsArea>
-          <Button variants={fadeInUp}>Add to cart</Button>
+          <Button variants={fadeInUp}>Adicionar ao carrinho</Button>
           <Button variant="empty" variants={fadeInUp}>
-            Add to wishlist
+            Lista de Desejos
           </Button>
         </S.ButtonsArea>
       </S.Wrapper>

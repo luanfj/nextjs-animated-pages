@@ -11,7 +11,9 @@ const Products = (props: ProductsTemplateProps): JSX.Element => (
 export const getServerSideProps: GetServerSideProps = async context => {
   const { slug } = context.query
 
-  const response = await api.get(`/luanfj/json-server/products/${slug}`)
+  const response = await api.get(
+    `/luanfj/nextjs-animated-pages/products/${slug}`
+  )
 
   return {
     props: {

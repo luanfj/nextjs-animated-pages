@@ -9,7 +9,7 @@ const Home = (props: HomeTemplateProps): JSX.Element => (
 )
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const response = await api.get('/luanfj/json-server/products')
+  const response = await api.get('/luanfj/nextjs-animated-pages/products')
 
   return {
     props: {
