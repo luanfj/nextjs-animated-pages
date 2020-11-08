@@ -32,6 +32,7 @@ export const Content = styled.section`
   justify-content: center;
 
   width: 100%;
+
   max-width: 700px;
   min-width: 300px;
 
@@ -42,10 +43,12 @@ export const Content = styled.section`
 
 export const Wrapper = styled(motion.div)`
   width: 100%;
-  max-width: 480px;
   display: flex;
   flex-direction: column;
-  padding: 0 15px;
+  padding: 30px;
+
+  height: 100vh;
+  overflow-x: hidden;
 
   a {
     color: #282828;
@@ -62,6 +65,35 @@ export const Wrapper = styled(motion.div)`
   p {
     color: #424550;
     font-weight: 300;
+
+    a {
+      color: #0041ff;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: #0041ff;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: width 0.2s;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    overflow-y: hidden;
+    height: 100%;
   }
 `
 

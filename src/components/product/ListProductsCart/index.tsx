@@ -9,6 +9,7 @@ import * as S from './styles'
 export interface ProductProps {
   id: string
   name: string
+  category: string
   image: string
   price: string
 }
@@ -40,7 +41,7 @@ const ListProductsCart: FC<ListProductCartsProps> = ({ products }) => (
     {products.map(product => (
       <Link
         key={product.id}
-        href="/products/[id]"
+        href="/products/[slug]"
         as={`/products/${product.id}`}
       >
         <S.ProductCartContainer variants={fadeInUp}>
@@ -59,7 +60,7 @@ const ListProductsCart: FC<ListProductCartsProps> = ({ products }) => (
           </motion.div>
           <S.ProductInfo variants={stagger}>
             <motion.p variants={fadeInUp}>{product.name}</motion.p>
-            <motion.p variants={fadeInUp}>Proteín</motion.p>
+            <motion.p variants={fadeInUp}>{product.category}</motion.p>
             <motion.p variants={fadeInUp}>{product.price}</motion.p>
           </S.ProductInfo>
         </S.ProductCartContainer>

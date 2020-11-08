@@ -2,6 +2,7 @@ import { FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import ReactHtmlParser from 'react-html-parser'
 
 import { ProductProps } from 'components/product/ListProductsCart'
 import Button from 'components/ui/Button'
@@ -38,7 +39,7 @@ const Products: FC<ProductsTemplateProps> = ({ product }) => (
           <h1>{product.name}</h1>
         </motion.div>
         <motion.div variants={fadeInUp}>
-          <p>{product.details}</p>
+          <p>{ReactHtmlParser(product.details)}</p>
         </motion.div>
 
         <S.Tags>
@@ -57,9 +58,9 @@ const Products: FC<ProductsTemplateProps> = ({ product }) => (
         </S.QuantityPrice>
 
         <S.ButtonsArea>
-          <Button variants={fadeInUp}>aa</Button>
+          <Button variants={fadeInUp}>Add to cart</Button>
           <Button variant="empty" variants={fadeInUp}>
-            aa
+            Add to wishlist
           </Button>
         </S.ButtonsArea>
       </S.Wrapper>

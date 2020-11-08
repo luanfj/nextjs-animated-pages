@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "id": "whey-isolate-black-series-go-nutrition",
+      "name": "WHEY Isolate Black Series - Go Nutrition",
+      "category": "Proteína",
+      "details": "Quem pratica exercícios físicos regularmente, principalmente musculação e esportes de alto desempenho, tem como objetivo, geralmente, reduzir gordura corporal e aumentar massa magra para fins de definição. Nesses casos, consumir Whey Protein junto a uma dieta balanceada é extremamente benéfico para potencializar os resultados.<br /><br />Isso porque as proteínas são as principais responsáveis pelo crescimento e desenvolvimento muscular, e o suplemento Whey Protein é rico em valor proteico. Como muitos alimentos fontes desse nutriente, o Whey Protein Isolate - Black Series da GO Nutrition atua de forma natural no organismo, porém, com a diferença de ser bem mais eficiente e concentrado.",
+      "price": "R$ 125,10",
+      "image": "https://d2vq4s943o8cb4.cloudfront.net/Custom/Content/Products/14/55/14550227_whey-protein-isolate-black-series-go-nutrition-6862_m7_636929261986756273.png"
+    },
+    {
+      "id": "super-whey-100-pure-integralmedica",
+      "name": "Super Whey 100% Pure - Integralmédica",
+      "category": "Proteína",
+      "details": "<strong>Whey 100% Pure</strong>&nbsp;da <a href='#'>Integralmédica</a>&nbsp;é um suplemento proteico com média velocidade de metabolização que contribui para prolongar o balanço nitrogenado positivo do organismo.&nbsp;O whey protein (proteína do soro de leite) é um tipo de proteína de alto valor biológico, ou seja, que possui elevados índices de aminoácidos essenciais.&nbsp;<br><br>A concentração de aminoácidos de cadeia ramificada (BCAA) encontrada no whey protein é maior do que em qualquer outra fonte proteica, o que lhe confere maior importância para atletas que necessitam de uma ingestão elevada desses nutrientes.&nbsp;<br><br>Seu sabor diferenciado, gostoso de verdade, é outro fator que faz do <strong>Whey 100% Pure</strong> uma grande escolha de suplemento proteico.<br><br>É indicado para o pós-treino e tem uma absorção média de 1 hora.",
+      "price": "R$ 89,10",
+      "image": "https://d2vq4s943o8cb4.cloudfront.net/Custom/Content/Products/04/76/0476_super-whey-100-pure-integralmedica-3198_m5_636948316255731169.png"
+    }
+  ]
+}

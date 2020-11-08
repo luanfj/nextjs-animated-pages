@@ -9,8 +9,9 @@ const Products = (props: ProductsTemplateProps): JSX.Element => (
 )
 
 export const getServerSideProps: GetServerSideProps = async context => {
-  const { id } = context.query
-  const response = await api.get(`/wrongakram/demo/products/${id}`)
+  const { slug } = context.query
+
+  const response = await api.get(`/luanfj/json-server/products/${slug}`)
 
   return {
     props: {
